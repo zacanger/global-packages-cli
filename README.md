@@ -1,5 +1,9 @@
 Just a simple cli for [global-packages](https://www.npmjs.com/package/global-packages).
 
-`npm i -g global-packages-cli`
+Installation: `npm i -g global-packages-cli`
 
-`global-packages`
+Usage: `global-packages`
+
+You can pass a flag to get the list in JSON: `global-packages -j`
+
+License: WTFPL
