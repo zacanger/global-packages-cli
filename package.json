@@ -1,0 +1,37 @@
+{
+  "name": "global-packages-cli",
+  "description": "cli for global-packages",
+  "version": "0.0.1",
+  "author": {
+    "name": "Zac Anger",
+    "email": "zac@zacanger.com",
+    "url": "http://zacanger.com"
+  },
+  "license": "WTFPL",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "global-packages": "./index.js",
+    "global-packages-cli": "./index.js"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "homepage": "https://github.com/zacanger/global-packages-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/global-packages-cli.git"
+  },
+  "bugs": "https://github.com/zacanger/global-packages-cli/issues",
+  "keywords": [
+    "global",
+    "modules",
+    "node",
+    "npm",
+    "packages"
+  ],
+  "dependencies": {
+    "global-packages": "^0.1.1"
+  },
+  "devDependencies": {}
+}
