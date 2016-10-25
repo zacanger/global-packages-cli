@@ -2,4 +2,5 @@
 
 const gp = require('global-packages')
 
-gp().then((a) => console.log(JSON.stringify(a, null, 2)))
+// gp().then((a) => console.log(JSON.stringify(a, null, 2).replace(/("|,|\[|\])/g, '')))
+// gp().then((a) => console.log(JSON.stringify(a, null, 2)))
