@@ -2,15 +2,33 @@
 
 const gp = require('global-packages')
 const arg = process.argv[2]
+const log = console.log
+const help = `
+  global-packages-cli
+  -------------------
+  Get a list of all node modules installed globally.
+  Usage:
+    global-packages
+  Options:
+    -j | --json
+    Get the list in JSON.
+  Example:
+    global-packages -j
+`
 
-const withJson = str => JSON.stringify(str, null, 2)
-
-if (arg) {
-  if (arg === '-j' || arg.includes('json')) {
-    return gp().then((a) => console.log(withJson(a)))
-  } else {
-    return console.log('usage: global-packages [-j (for json)]')
+const main = opts => {
+  if (opts) {
+    if (opts === '-j' || opts.includes('json')) {
+      return gp().then((a) => log(JSON.stringify(a, null, 2)))
+    } else {
+      return log(help)
+    }
   }
+  return gp().then((a) => log(a.toString().replace(/('|,)/g, '\n')))
 }
 
-gp().then((a) => console.log(withJson(a).replace(/("|,|\[|\])/g, '')))
+if (module.parent) {
+  log('global-packages-cli should be installed globally')
+} else {
+  main(arg)
+}
