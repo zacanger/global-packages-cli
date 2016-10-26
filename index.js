@@ -2,7 +2,7 @@
 
 const gp = require('global-packages')
 const arg = process.argv[2]
-const log = console.log
+const { log } = console
 const help = `
   global-packages-cli
   -------------------
