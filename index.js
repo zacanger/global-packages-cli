@@ -24,7 +24,7 @@ const main = opts => {
       return log(help)
     }
   }
-  return gp().then((a) => log(a.toString().replace(/('|,)/g, '\n')))
+  return gp().then((a) => a.forEach((i) => log(i)))
 }
 
 if (module.parent) {
