@@ -6,4 +6,4 @@ Usage: `global-packages`
 
 You can pass a flag to get the list in JSON: `global-packages -j`
 
-License: WTFPL
+License: MIT

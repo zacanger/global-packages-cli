@@ -16,15 +16,17 @@ const help = `
     global-packages -j
 `
 
+const mapNames = (xs) => xs.map((x) => x.name)
+
 const main = opts => {
   if (opts) {
     if (opts === '-j' || opts.includes('json')) {
-      return gp().then((a) => log(JSON.stringify(a, null, 2)))
+      return gp().then((a) => log(JSON.stringify(mapNames(a), null, 2)))
     } else {
       return log(help)
     }
   }
-  return gp().then((a) => a.forEach((i) => log(i)))
+  return gp().then((a) => log(mapNames(a)))
 }
 
 if (module.parent) {
