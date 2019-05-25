@@ -3,8 +3,8 @@
   "description": "cli for global-packages",
   "version": "1.0.0",
   "author": {
-    "name": "Zac Anger",
     "email": "zac@zacanger.com",
+    "name": "Zac Anger",
     "url": "http://zacanger.com"
   },
   "license": "MIT",
@@ -15,7 +15,7 @@
     "global-packages-cli": "./index.js"
   },
   "scripts": {
-    "start": "node index"
+    "preversion": "sortpack && standard"
   },
   "homepage": "https://github.com/zacanger/global-packages-cli#readme",
   "repository": {
@@ -33,7 +33,10 @@
   "dependencies": {
     "global-packages": "1.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sortpack": "1.1.6",
+    "standard": "12.0.1"
+  },
   "engines": {
     "node": ">=10.0.0"
   }
