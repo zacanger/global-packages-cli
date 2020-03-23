@@ -18,7 +18,7 @@ const help = `
 
 const mapNames = (xs) => xs.map((x) => x.name)
 
-const main = opts => {
+const main = (opts) => {
   if (opts) {
     if (opts === '-j' || opts.includes('json')) {
       return gp().then((a) => log(JSON.stringify(mapNames(a), null, 2)))
