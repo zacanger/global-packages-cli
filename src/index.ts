@@ -25,6 +25,7 @@ const mapNames = (xs: Array<Package>) => xs.map((x) => x.name)
 
 const main = (opts: string) => {
   if (opts) {
+    // eslint-disable-next-line unicorn/prefer-ternary
     if (opts === '-j' || opts.includes('json')) {
       return gp().then((a: Array<Package>) =>
         log(JSON.stringify(mapNames(a), null, 2))
